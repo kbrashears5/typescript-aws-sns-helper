@@ -1,7 +1,6 @@
 import { BaseMock } from 'typescript-helper-functions';
+import * as SNS from '@aws-sdk/client-sns';
 
-// tslint:disable-next-line: no-var-requires
-const AWS = require('aws-sdk');
 
 /**
  * SNS Mock class
@@ -9,9 +8,9 @@ const AWS = require('aws-sdk');
 export class SNSMock extends BaseMock {
 
     /**
-     * Mocks an AWS.SNS.PublishResponse response
+     * Mocks an SNS.PublishResponse response
      */
-    public PublishResponse: AWS.SNS.PublishResponse = {};
+    public PublishResponse: SNS.PublishResponse = {};
 
     /**
      * Create the SNS mock
@@ -26,13 +25,15 @@ export class SNSMock extends BaseMock {
                 promise: jest.fn().mockImplementation(() => {
                     return returnError ?
                         Promise.reject(rejectResponse) :
-                        Promise.resolve<AWS.SNS.PublishResponse>(this.PublishResponse);
+                        Promise.resolve<SNS.PublishResponse>(this.PublishResponse);
                 }),
             },
         };
 
+        const options = {} as SNS.SNSClientConfig;
+
         // create the functions
-        let functions = new AWS.SNS();
+        let functions = new SNS.SNS(options);
         functions = {
             publish: () => awsResponses.publish,
         };
