@@ -12,7 +12,7 @@ export class SNSHelper extends BaseClass implements ISNSHelper {
     /**
      * AWS Repository for SNS
      */
-    public Repository: SNS.SNS;
+    private Repository: SNS.SNS;
 
     /**
      * Initializes new instance of SNSHelper

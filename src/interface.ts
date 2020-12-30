@@ -5,12 +5,6 @@ import * as SNS from '@aws-sdk/client-sns';
  * SNS Helper
  */
 export interface ISNSHelper {
-
-    /**
-     * AWS Repository for SNS
-     */
-    Repository: SNS.SNS;
-
     /**
      * Publish a message
      * @param topicArn {string} Topic ARN to publish to
