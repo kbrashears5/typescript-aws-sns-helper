@@ -48,3 +48,6 @@ const response = await helper.PublishAsync('topic',
     'subject',
     'message');
 ```
+
+## Notes
+If no options are supplied, will default to `us-east-1` as the region
