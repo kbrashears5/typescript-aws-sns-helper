@@ -1,9 +1,3 @@
 {
-    "cSpell.words": [
-        "ISNS",
-        "cobertura",
-        "ilogger",
-        "postpublish",
-        "prebuild"
-    ]
+  "cSpell.words": ["ISNS", "cobertura", "ilogger", "postpublish", "prebuild"]
 }
