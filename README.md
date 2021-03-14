@@ -34,15 +34,17 @@ const response = await helper.PublishAsync('topic', 'subject', 'message');
 ### Running in separate account or not in Lambda
 
 ```typescript
+import * as SNS from '@aws-sdk/client-sns';
+
 const logger = new Logger(LogLevel.Trace);
 
-const options: AWS.SNS.ClientConfiguration = {
+const options: SNS.SNSClientConfig = {
   accessKeyId: '{access_key}',
   secretAccessKey: '{secret_key}',
   region: 'us-east-1',
 };
 
-const repository = new AWS.SNS(options);
+const repository = new SNS.SNS(options);
 
 const helper = new SNSHelper(logger, repository);
 
