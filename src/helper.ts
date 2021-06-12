@@ -14,6 +14,11 @@ export class SNSHelper extends BaseClass implements ISNSHelper {
   private Repository: SNS.SNS;
 
   /**
+   * SNS Client Config
+   */
+  private Options: SNS.SNSClientConfig;
+
+  /**
    * Initializes new instance of SNSHelper
    * @param logger {ILogger} Injected logger
    * @param repository {SNS.SNS} Injected Repository. A new repository will be created if not supplied
@@ -25,10 +30,11 @@ export class SNSHelper extends BaseClass implements ISNSHelper {
     options?: SNS.SNSClientConfig,
   ) {
     super(logger);
-    options = this.ObjectOperations.IsNullOrEmpty(options)
+    this.Options = this.ObjectOperations.IsNullOrEmpty(options)
       ? ({ region: 'us-east-1' } as SNS.SNSClientConfig)
-      : options!;
-    this.Repository = repository || new SNS.SNS(options);
+      : // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        options!;
+    this.Repository = repository || new SNS.SNS(this.Options);
   }
 
   /**

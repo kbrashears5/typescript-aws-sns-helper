@@ -27,7 +27,7 @@ const TestValues = new TestingValues();
  * Test the PublishAsync method
  */
 describe(`${SNSHelper.name}.${snsHelperMock.PublishAsync.name}`, () => {
-  test(TestValues.InvalidTest, () => {
+  test(`${TestValues.InvalidTest}`, () => {
     const actual = snsHelperMock.PublishAsync(
       TestValues.Arn,
       TestValues.Subject,

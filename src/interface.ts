@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { MessageAttributeValue } from './any';
 import * as SNS from '@aws-sdk/client-sns';
 

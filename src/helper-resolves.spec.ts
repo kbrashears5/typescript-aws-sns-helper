@@ -61,7 +61,7 @@ describe(`${SNSHelper.name}.${snsHelperMock.PublishAsync.name}`, () => {
       `[${action}]-${TestValues.MustSupply} message`,
     );
   });
-  test(TestValues.ValidTest, () => {
+  test(`${TestValues.ValidTest}`, () => {
     const actual = snsHelperMock.PublishAsync(
       TestValues.Arn,
       TestValues.Subject,

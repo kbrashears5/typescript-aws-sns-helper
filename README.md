@@ -4,9 +4,7 @@
     
 <b>Typescript helper functions for AWS SNS service</b>
     
-[![Build Status](https://dev.azure.com/kbrashears5/github/_apis/build/status/kbrashears5.typescript-aws-sns-helper?branchName=master)](https://dev.azure.com/kbrashears5/github/_build/latest?definitionId=12&branchName=master)
-[![Tests](https://img.shields.io/azure-devops/tests/kbrashears5/github/12)](https://img.shields.io/azure-devops/tests/kbrashears5/github/12)
-[![Code Coverage](https://img.shields.io/azure-devops/coverage/kbrashears5/github/12)](https://img.shields.io/azure-devops/coverage/kbrashears5/github/12)
+[![CI/CD](https://github.com/kbrashears5/typescript-aws-sns-helper/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/kbrashears5/typescript-aws-sns-helper/actions/workflows/ci-cd.yml)
 
 [![NPM Version](https://img.shields.io/npm/v/typescript-aws-sns-helper)](https://img.shields.io/npm/v/typescript-aws-sns-helper)
 [![Downloads](https://img.shields.io/npm/dt/typescript-aws-sns-helper)](https://img.shields.io/npm/dt/typescript-aws-sns-helper)
@@ -54,3 +52,13 @@ const response = await helper.PublishAsync('topic', 'subject', 'message');
 ## Notes
 
 If no options are supplied, will default to `us-east-1` as the region
+
+## Development
+
+Clone the latest and run
+
+```npm
+npm run prep
+```
+
+to install packages and prep the git hooks
