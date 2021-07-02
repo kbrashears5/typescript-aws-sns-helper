@@ -5,7 +5,7 @@
 <b>Typescript helper functions for AWS SNS service</b>
     
 [![CI/CD](https://github.com/kbrashears5/typescript-aws-sns-helper/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/kbrashears5/typescript-aws-sns-helper/actions/workflows/ci-cd.yml)
-
+[![codecov](https://codecov.io/gh/kbrashears5/typescript-aws-sns-helper/branch/master/graph/badge.svg?token=EAGFPWYZB0)](https://codecov.io/gh/kbrashears5/typescript-aws-sns-helper)
 [![NPM Version](https://img.shields.io/npm/v/typescript-aws-sns-helper)](https://img.shields.io/npm/v/typescript-aws-sns-helper)
 [![Downloads](https://img.shields.io/npm/dt/typescript-aws-sns-helper)](https://img.shields.io/npm/dt/typescript-aws-sns-helper)
 
